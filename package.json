@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/informatika-19/latihan1-nodejs-ahmadparuji-19421004#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "bcrypt": "^5.0.1",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.3"
   }
 }
