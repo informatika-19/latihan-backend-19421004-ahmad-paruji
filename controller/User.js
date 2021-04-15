@@ -33,3 +33,31 @@ new Promise((resolve, reject) => {
         }
     })
 })
+
+exports.login=(username,password)=>
+new Promise((resolve,reject)=>{
+    userModel.findOne({
+        username: data.username
+    }).then((user) =>{
+        if (user){
+            if (bcrypt.compareSync(data.password,user.password)){
+                resolve({
+                    status : true,
+                    pesan :'berhasil login'
+                
+                })
+            }else{
+                reject({
+                    status: false,
+                    pesan :'password tidak sesuai'
+                })
+            }
+        }else{
+            reject({
+                status: false,
+                pesan:'username tidak terdaftar'
+            })
+        }
+
+})
+})
