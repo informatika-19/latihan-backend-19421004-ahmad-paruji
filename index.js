@@ -43,6 +43,7 @@ app.get('/daerah/:namadaerah/:id', (req, res) => {
 })
 
 app.use('/User', require('./routes/User'))
+app.use('/kegiatan', require('./routes/kegiatan'))
 
 app.listen(3000, () => {
     console.log('Server Started')
